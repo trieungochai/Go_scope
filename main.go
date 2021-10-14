@@ -1,21 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"myapp/packageone"
 )
 
-var one = "One"
+var myVar = "This is a package level variable"
 
 func main() {
-	var somethingElse = "This is a block level variable"
-	fmt.Println(somethingElse)
-	myFunc()
+	// variables
+	var blockVar = "This is a block level variable"
 
-	newString := packageone.PublicVar
-	fmt.Println("From packageone: ", newString)
-}
-
-func myFunc() {
-	fmt.Println(one)
+	packageone.PrintMe(myVar, blockVar)
 }
